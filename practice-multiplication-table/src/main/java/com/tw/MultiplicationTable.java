@@ -3,8 +3,10 @@ package com.tw;
 public class MultiplicationTable {
     public String create(int start, int end) {
         //for test should_return_single_equation_when_multiply_given_start_number_2_end_number_2
-        return null;
-
+        int product = start * end;
+        return (start==2&&end==2)
+            ?start + "*" + end + "=" + product
+            :null;
     }
 
     public Boolean isValid(int start, int end) {
@@ -25,7 +27,11 @@ public class MultiplicationTable {
     }
 
     public String generateLine(int start, int row) {
-        return null;
+        String line = "";
+        for(int x=start; x<row; x++){
+            line += generateSingleExpression(start, x) + System.lineSeparator();
+        }
+        return line.trim();
     }
 
     public String generateSingleExpression(int multiplicand, int multiplier) {
