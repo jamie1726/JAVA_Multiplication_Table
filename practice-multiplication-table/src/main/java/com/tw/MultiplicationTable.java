@@ -2,17 +2,16 @@ package com.tw;
 
 public class MultiplicationTable {
     public String create(int start, int end) {
+        //for test should_return_single_equation_when_multiply_given_start_number_2_end_number_2
+    return null;
 
-        return null;
     }
 
     public Boolean isValid(int start, int end) {
-
-        return null;
+        return start<=end;
     }
 
     public Boolean isInRange(int number) {
-
         return number>=1 && number<=1000;
     }
 
@@ -22,10 +21,6 @@ public class MultiplicationTable {
     }
 
     public String generateTable(int start, int end) {
-        int a = start;
-        int b=end;
-        int product=start*end;
-
         return null;
     }
 
