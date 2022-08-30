@@ -22,16 +22,32 @@ public class MultiplicationTable {
     }
 
     public String generateTable(int start, int end) {
-        return null;
-
+        String table = "";
+            for(int x=start; x<=end; x++){
+                table += generateLine(start, x) + System.lineSeparator();
+            }
+        return table.trim();
     }
-
+    //x=start(2)
+    //<end=4
+    //generate start=2, x=2
+    //2*2=2
+    //generate start=2, x=3
+    //2*3=6  3*3=9
+    //generate start=2, x=3
+    //2*4=8  3*4=16  4*4=16
     public String generateLine(int start, int row) {
         String line = "";
-        for(int x=start; x<row; x++){
-            line += generateSingleExpression(start, x) + System.lineSeparator();
+        for(int x=start; x<=row; x++){
+            line += generateSingleExpression(x, row) + "  ";
         }
         return line.trim();
+        //x=start(2)
+        //<row=4
+        //generate x=2, row=4  = 2*4=16
+        //generate x=3, row=4  = 3*4=16
+        //generate x=4, row=4  = 4*4=16
+        //2*4=16  3*4=16 4*4=16
     }
 
     public String generateSingleExpression(int multiplicand, int multiplier) {
