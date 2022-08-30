@@ -3,7 +3,7 @@ package com.tw;
 public class MultiplicationTable {
     public String create(int start, int end) {
         //for test should_return_single_equation_when_multiply_given_start_number_2_end_number_2
-    return null;
+        return null;
 
     }
 
@@ -16,19 +16,21 @@ public class MultiplicationTable {
     }
 
     public Boolean isStartNotBiggerThanEnd(int start, int end) {
-
         return start<=end;
     }
 
     public String generateTable(int start, int end) {
         return null;
+
     }
 
     public String generateLine(int start, int row) {
         return null;
+
     }
 
     public String generateSingleExpression(int multiplicand, int multiplier) {
-        return null;
+        int product = multiplicand * multiplier;
+        return multiplicand + "*" + multiplier + "=" + product;
     }
 }
