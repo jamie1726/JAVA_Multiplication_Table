@@ -10,10 +10,12 @@ public class MultiplicationTable {
     }
 
     public Boolean isValid(int start, int end) {
+        //start cannot be greater than end
         return start<=end;
     }
 
     public Boolean isInRange(int number) {
+        //must be between 1-1000
         return number>=1 && number<=1000;
     }
 
